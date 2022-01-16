@@ -1,0 +1,57 @@
+.teacher {
+    width:100%;
+    height:100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.name {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-left:23px;
+    margin-right:23px;
+}
+.bottom {
+    display:flex;
+    justify-content:space-around;
+    height:80%;
+}
+.lr {
+    width:45%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+.number {
+    width:100%;
+    height:35%;
+    display:flex;
+    flex-direction:row;
+}
+.get {
+    text-align:center;
+    width:50%;
+    border:3px solid black;
+}
+.notice {
+    text-align:center;
+    width:100%;
+    height:20%;
+    border:3px solid black;
+}
+
+.send {
+    height:15%;
+    text-align:center;
+    color:white;
+    background-color: skyblue;
+    font-weight:bold;
+}
+.list {
+    height:70%;
+    border:3px solid black;
+}
+.number {
+    display:flex
+}
