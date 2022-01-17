@@ -7,7 +7,6 @@ function HomeStudent({text}) {
     return (
         <div className={styles.student}>
             <span className={styles.span1}>{text}</span>
-            <span>~~~~~~~~~~~~~~</span>
             <button className={styles.btn} onClick={onClick}>로그인 / 회원가입</button>
         </div>
     );

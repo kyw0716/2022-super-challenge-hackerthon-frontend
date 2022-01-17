@@ -31,6 +31,7 @@
     top: 11%;
     background-color: #cccccc;
     border-radius: 35px;
+    box-shadow: 5px 10px;
 }
 .teacher{
     position: absolute;
@@ -45,6 +46,7 @@
     top: 11%;
     background-color: #cccccc;
     border-radius: 35px;
+    box-shadow: 5px 10px;
 }
 .btn{
     width: 80%;
@@ -52,6 +54,7 @@
     border-radius: 60px;
     background-color: white;
     border: 3px solid;
+    font-weight: bold;
 }
 .span1{
     font-size: 30px;
