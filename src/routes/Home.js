@@ -5,8 +5,8 @@ function Home() {
 
     return (
         <div className="Home">
-            <div className={style.upBox}></div>
-            <div className={style.downBox}></div>
+            <div className={style.upBox}><button><Link to="/student">student</Link></button></div>
+            <div className={style.downBox}><button><Link to="/teacher">teacher</Link></button></div>
             <div className={style.student}>
                 <span>학생 / 학부모용</span>
                 <span>~~~~~~~~~~~~~~</span>
