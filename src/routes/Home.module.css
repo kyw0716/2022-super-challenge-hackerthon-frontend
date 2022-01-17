@@ -7,12 +7,12 @@
     flex-direction: column;
 }
 .upBox{
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     background-color: aqua;
 }
 .downBox{
-    height: 50vh;
+    height: 40vh;
     width: 100%;
 }
 .student{
@@ -20,11 +20,11 @@
     border: 1px solid;
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 60%;
+    width: 25%;
+    height: 65%;
     justify-content: space-evenly;
     align-items: center;
-    left: 15%;
+    left: 20%;
     top: 20%;
     background-color: white;
     border-radius: 35px;
@@ -34,12 +34,17 @@
     border: 1px solid;
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 60%;
+    width: 25%;
+    height: 65%;
     justify-content: space-evenly;
     align-items: center;
-    right: 15%;
+    right: 20%;
     top: 20%;
     background-color: white;
     border-radius: 35px;
+}
+.btn{
+    width: 80%;
+    height: 12%;
+    border-radius: 60px;
 }
