@@ -11,6 +11,7 @@
 .upBox{
     height: 60vh;
     width: 100%;
+    text-align: center;
 }
 .downBox{
     height: 40vh;
@@ -55,4 +56,13 @@
 .span1{
     font-size: 30px;
     font-weight: bold;
+}
+.hitech{
+    font-size: 30px;
+    font-weight: bold;
+}
+.studentBtn{
+    position: absolute;
+    left: 0;
+    top: 0;
 }
