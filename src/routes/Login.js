@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "./Login.module.css";
+import styles from "./Login.module.css";
 
 function Login() {
     const [idValue, setIdValue] = useState("");
@@ -39,33 +39,33 @@ function Login() {
         }
     }
     return (
-        <div className={style.login}>
-            <div className={style.container}>
-                <div className={style.upBox}>
+        <div className={styles.login}>
+            <div className={styles.container}>
+                <div className={styles.upBox}>
                     <form 
-                        className={style.formTag}
+                        className={styles.formTag}
                         onSubmit={onSubmit}
                     >
-                        <div className={style.inputContainer}>
+                        <div className={styles.inputContainer}>
                             <input
-                                className={style.input}
+                                className={styles.input}
                                 placeholder="ID"
                                 onChange={onChangeIdValue}
                                 value={idValue}
                                 type="text"
                             />
                             <input
-                                className={style.input}
+                                className={styles.input}
                                 placeholder="PW"
                                 onChange={onChangePwValue}
                                 value={pwValue}
                                 type={type}
                             />
                         </div>
-                        <button className={style.btn}>log in</button>
+                        <button className={styles.btn}>log in</button>
                     </form>
                 </div>
-                <div className={style.idPw}>회원가입 / ID PW 찾기<button onClick={typeFlip}>비밀번호 보기</button></div>
+                <div className={styles.idPw}>회원가입 / ID PW 찾기<button onClick={typeFlip}>비밀번호 보기</button></div>
             </div>
             {id !== '' && pw !== '' ? 
                 <div>
