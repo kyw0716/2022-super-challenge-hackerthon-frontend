@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Guide from "./routes/Guide";
 import Home from "./routes/Home";
 import Login from "./routes/Login";
+import Signup from "./routes/Signup";
 import Student from "./routes/Student";
 import Teacher from "./routes/Teacher";
 
@@ -9,16 +10,19 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/guide">
+        <Route path="/guidePage">
           <Guide/>
         </Route>
-        <Route path="/login">
+        <Route path="/signupPage">
+          <Signup/>
+        </Route>
+        <Route path="/loginPage">
           <Login/>
         </Route>
-        <Route path="/student">
+        <Route path="/studentPage">
           <Student/>
         </Route>
-        <Route path="/teacher">
+        <Route path="/teacherPage">
           <Teacher/>
         </Route>
         <Route path="/">

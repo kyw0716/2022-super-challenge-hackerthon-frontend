@@ -1,22 +1,18 @@
 import { Link } from "react-router-dom";
-import style from "./Home.module.css"
+import HomeStudent from "../components/HomeStudent";
+import HomeTeacher from "../components/HomeTeacher";
+import styles from "./Home.module.css"
 
 function Home() {
-
     return (
-        <div className="Home">
-            <div className={style.upBox}></div>
-            <div className={style.downBox}></div>
-            <div className={style.student}>
-                <span>학생 / 학부모용</span>
-                <span>~~~~~~~~~~~~~~</span>
-                <button><Link to="/login">로그인 / 회원가입</Link></button>
+        <div className={styles.Home}>
+            <div className={styles.upBox}>
+                <span className={styles.hitech}>@ㅎㅏㅌㅔㄱㅇㅣㅁㅣㄹㅐㄷㅏㅇ</span><br/>
+                <button className={styles.studentBtn}><Link to="/studentPage">student</Link></button>
             </div>
-            <div className={style.teacher}>
-                <span>교사 / 교직원용</span>
-                <span>~~~~~~~~~~~~~~</span>
-                <button><Link to="/login">로그인 / 회원가입</Link></button>
-            </div>
+            <div className={styles.downBox}><button><Link to="/teacherPage">teacher</Link></button></div>
+            <HomeStudent text="학생 / 학부모용"/>
+            <HomeTeacher text="교사 / 교직원용"/>
         </div>
     );
 }
