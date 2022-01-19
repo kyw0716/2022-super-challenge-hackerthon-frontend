@@ -93,5 +93,4 @@ npm start
 ```
 >그러면 `localhost:3000`으로 서버가 열려 작업한 코드 내용을 웹 브라우저를 통해 볼 수 있게 된다.
 
->[backend](https://github.com/chominho96/INHA-super-challenge-hackathon-Back-end.git)
->위 링크를 통해 백엔드 코드를 클론해온 후 실행 시켜 전체적인 기능 또한 사용해볼 수 있다.
+>[backend](https://github.com/chominho96/INHA-super-challenge-hackathon-Back-end.git) <br/> 위 링크를 통해 백엔드 코드를 클론해온 후 실행 시켜 전체적인 기능 또한 사용해볼 수 있다.
