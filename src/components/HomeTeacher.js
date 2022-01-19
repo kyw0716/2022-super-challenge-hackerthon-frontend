@@ -2,7 +2,7 @@ import styles from "../routes/Home.module.css";
 
 function HomeTeacher({text}) {
     const onClick = () =>{
-        window.location.href = "/login"
+        window.location.href = "/loginPage"
     }
     return (
         <div className={styles.teacher}>
