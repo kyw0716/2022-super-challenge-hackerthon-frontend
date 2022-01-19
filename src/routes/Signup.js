@@ -9,9 +9,9 @@ function Signup() {
     const [ageValue, setAgeValue] = useState("");
     const [genderValue, setGenderValue] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    // const redirect = () =>{
-    //     window.location.href = "/loginPage";
-    // }
+    const redirect = () =>{
+        window.location.href = "/loginPage";
+    }
     const pwOnChange = (e) => {
         setPassword(e.target.value);
     }
@@ -45,7 +45,7 @@ function Signup() {
                 "gender" : genderValue,
                 "job" : jobValue
             })
-        }).then(response => console.log(response));
+        }).then(redirect);
     }
     return (
         <div className={styles.container}>
