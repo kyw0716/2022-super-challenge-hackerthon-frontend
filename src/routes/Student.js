@@ -5,7 +5,7 @@ function Student() {
         <div className={style.student}>
             <div className={style.navBar}>
                 <div className={style.logo}>
-                    하이테크 미래 고등학교
+                    Hightech-school
                 </div>
                 <div className={style.name}>
                     000님, 환영합니다!
@@ -20,25 +20,25 @@ function Student() {
                         <button className={style.testBtn}>Go!!</button>
                     </div>
                     <div className={style.guide}>
-                        <Link to="/guide">
-                            지침
+                        <Link className={style.guide2} to="/guidePage">
+                            ※ 지침 ※
                         </Link>
                     </div>
                 </div>
                 <div className={style.rightContainer}>
                     <div className={style.box}>
                         <span className={style.boxTitle}>부작용 신고</span>
-                        <div className={style.picture}></div>
+                        <div className={style.picture1}></div>
                         <button className={style.link}>바로가기</button>
                     </div>
                     <div className={style.box}>
                         <span className={style.boxTitle}>백신예약</span>
-                        <div className={style.picture}></div>
+                        <div className={style.picture2}></div>
                         <button className={style.link}>바로가기</button>
                     </div>
                     <div className={style.box}>
                         <span className={style.boxTitle}>예방접종 도우미</span>
-                        <div className={style.picture}></div>
+                        <div className={style.picture3}></div>
                         <button className={style.link}>바로가기</button>
                     </div>
                 </div>

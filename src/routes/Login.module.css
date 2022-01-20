@@ -6,12 +6,12 @@
     height: 100vh;
     margin: 0;
     padding: 0;
-    flex-direction: column;
+    background-color:aliceblue;
 }
 .container{
     width: 50%;
     height: 50vh;
-    border: 1px solid;
+    border: 1px solid skyblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,18 +40,19 @@
 .input{
     width: 95%;
     height: 40%;
+    border: 1px solid skyblue;
 }
 .btn{
     width: 15%;
     height: 98%;
+    border: 1px solid rgb(172, 218, 236);
+    background-color:rgb(172, 218, 236);
+    color:white;
 }
 .idPw{
     display: flex;
     justify-content: flex-start;
     width: 60%;
     margin-left: 5px;
-}
-.link{
-    text-decoration: none;
-    color: black;
+    color:gray;
 }

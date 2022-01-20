@@ -1,0 +1,53 @@
+.Page {
+    overflow: scroll;
+    overflow-x:hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:aliceblue;
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.page {
+    width:70%;
+    align-items:center;
+}
+.top_bar {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background-color: skyblue;
+    color:white;
+    margin-bottom:50px;
+    margin-top:20px;
+    border-radius:20px;
+}
+.title {
+    font-weight:bold;
+    margin-left:20px;
+}
+.back {
+    font-size:15px;
+    margin-right:20px;
+}
+.submit {
+    margin-left:30%;
+    justify-content:center;
+    width:20%;
+    height:50px;
+    border: 1px solid skyblue;
+    background-color:skyblue;
+    border-radius:20px;
+    font-size:30px;
+    font-weight:bold;
+    font-family:"Nanum Myeongjo";
+    color: white;
+    margin-bottom: 10px;
+}
+@font-face {
+        font-family:"Nanum Myeongjo";
+        src: url("./font/NanumMyeongjo-Regular.ttf");
+    } 

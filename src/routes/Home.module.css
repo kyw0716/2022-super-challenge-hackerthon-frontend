@@ -5,67 +5,68 @@
     margin: 0;
     padding: 0;
     flex-direction: column;
-    align-items: center;
-    background-color: whitesmoke;
 }
 .upBox{
-    height: 60vh;
+    height: 55vh;
     width: 100%;
-    text-align: center;
+    /* background-image: url('./background3.png');
+    background-size: cover; */
 }
 .downBox{
-    height: 40vh;
+    height: 45vh;
     width: 100%;
-    background-image: url(https://cdn.pixabay.com/photo/2020/07/09/09/31/line-art-children-5386523_960_720.png);
+    background-image: url('./background5.png');
 }
 .student{
     position: absolute;
-    border: 5px solid;
+    border: 2px solid hsl(331, 88%, 91%);
     display: flex;
     flex-direction: column;
-    width: 25%;
-    height: 65%;
+    width: 27%;
+    height: 60%;
     justify-content: space-evenly;
     align-items: center;
-    left: 20%;
-    top: 11%;
-    background-color: #cccccc;
+    left: 15%;
+    top: 16%;
+    background-color: hsl(331, 88%, 91%);
     border-radius: 35px;
-    box-shadow: 5px 10px;
+    font-family:"Nanum Myeongjo";
+    font-weight:bold;
+    font-size:40px;
+    color:white;
+    box-shadow: 10px 5px 5px rgb(235, 234, 234);
 }
 .teacher{
     position: absolute;
-    border: 5px solid;
+    border: 2px solid rgb(208, 210, 240);
     display: flex;
     flex-direction: column;
-    width: 25%;
-    height: 65%;
+    width: 27%;
+    height: 60%;
     justify-content: space-evenly;
     align-items: center;
-    right: 20%;
-    top: 11%;
-    background-color: #cccccc;
+    right: 15%;
+    top: 16%;
+    background-color: rgb(208, 210, 240);
     border-radius: 35px;
-    box-shadow: 5px 10px;
+    font-family:"Nanum Myeongjo";
+    font-weight:bold;
+    font-size:40px;
+    color:white;
+    box-shadow: 10px 5px 5px rgb(235, 234, 234);
 }
-.btn{
-    width: 80%;
-    height: 12%;
-    border-radius: 60px;
-    background-color: white;
-    border: 3px solid;
-    font-weight: bold;
+.butt {
+    width:101.5%;
+    height:20%;
+    border: 1px solid white;
+    background-color:white;
 }
-.span1{
-    font-size: 30px;
-    font-weight: bold;
+.button {
+    color:gray;
+    font-size:15px;
+    font-weight:bold;
 }
-.hitech{
-    font-size: 30px;
-    font-weight: bold;
-}
-.studentBtn{
-    position: absolute;
-    left: 0;
-    top: 0;
+@font-face {
+    font-family:"Nanum Myeongjo";
+    src: url("./font/NanumMyeongjo-Regular.ttf");
 }

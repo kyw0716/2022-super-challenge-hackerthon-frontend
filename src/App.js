@@ -5,11 +5,15 @@ import Login from "./routes/Login";
 import Signup from "./routes/Signup";
 import Student from "./routes/Student";
 import Teacher from "./routes/Teacher";
+import Page from "./routes/Page";
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/listPage">
+          <Page/>
+        </Route>
         <Route path="/guidePage">
           <Guide/>
         </Route>

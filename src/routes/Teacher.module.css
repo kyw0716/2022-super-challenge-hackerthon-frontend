@@ -11,10 +11,19 @@
     margin-left:23px;
     margin-right:23px;
 }
+.school {
+    font-size:40px;
+}
+.welcome {
+    font-size:20px;
+    font-family:'Nanum Myeongjo', serif;
+}
 .bottom {
     display:flex;
     justify-content:space-around;
     height:80%;
+    font-family:'Nanum Myeongjo', serif;
+    font-weight:bold;
 }
 .lr {
     width:45%;
@@ -32,26 +41,58 @@
 .get {
     text-align:center;
     width:50%;
-    border:3px solid black;
+    border:1px solid rgb(174, 226, 247);
+    font-size:20px;
+    font-weight:bold;
+}
+.get2 {
+    height:40%;    
+    margin-top:40%;
+    font-size:15px;
 }
 .notice {
     text-align:center;
     width:100%;
-    height:20%;
-    border:3px solid black;
+    height:30%;
+    border:1px solid rgb(174, 226, 247);
+    font-size:20px;
+    font-weight:bold;
 }
-
+.pointer {
+    text-align:center;
+    width:100%;
+    height:10%;
+    border:1px solid aliceblue;
+    border-radius:20px;
+    font-size:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:aliceblue;
+}
+.point {
+    color:black;
+}
 .send {
     height:15%;
     text-align:center;
     color:white;
-    background-color: skyblue;
+    background-color: rgb(174, 226, 247);
+    font-family:'Nanum Myeongjo', serif;
     font-weight:bold;
+    font-size:30px;
+    border: 1px solid rgb(174, 226, 247);
+    border-radius:20px;
 }
 .list {
     height:70%;
-    border:3px solid black;
+    border:1px solid rgb(174, 226, 247);
 }
 .number {
     display:flex
+}
+
+@font-face {
+    font-family:"Nanum Myeongjo";
+    src: url("./font/NanumMyeongjo-Regular.ttf");
 }
