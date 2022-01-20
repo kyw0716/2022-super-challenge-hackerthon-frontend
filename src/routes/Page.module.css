@@ -6,10 +6,15 @@
     align-items: center;
     flex-direction: column;
     background-color:aliceblue;
-
+    
     margin: 0;
     padding: 0;
     height: 100vh;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .page {
     width:70%;
@@ -19,7 +24,7 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
-    background-color: skyblue;
+    background-color: rgb(192, 231, 247);
     color:white;
     margin-bottom:50px;
     margin-top:20px;
@@ -27,19 +32,20 @@
 }
 .title {
     font-weight:bold;
-    margin-left:20px;
+    margin-left:30px;
 }
 .back {
     font-size:15px;
+    font-weight:bold;
     margin-right:20px;
+    color:black;
 }
 .submit {
-    margin-left:30%;
     justify-content:center;
     width:20%;
     height:50px;
-    border: 1px solid skyblue;
-    background-color:skyblue;
+    border: 1px solid rgb(198, 230, 243);
+    background-color:rgb(198, 230, 243);
     border-radius:20px;
     font-size:30px;
     font-weight:bold;
@@ -48,6 +54,6 @@
     margin-bottom: 10px;
 }
 @font-face {
-        font-family:"Nanum Myeongjo";
-        src: url("./font/NanumMyeongjo-Regular.ttf");
-    } 
+    font-family:"Nanum Myeongjo";
+    src: url("./font/NanumMyeongjo-Regular.ttf");
+}

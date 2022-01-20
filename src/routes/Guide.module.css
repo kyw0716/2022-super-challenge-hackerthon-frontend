@@ -6,6 +6,9 @@
     padding: 0;
     justify-content: space-around;
     align-items: center;
+    font-family:"Nanum Myeongjo";
+    font-weight:bold;
+    background-color:aliceblue;
 }
 .rightBox{
     width: 40%;
@@ -13,18 +16,42 @@
     display: flex;
     flex-direction: column;
 }
+.photo1 {
+    width:12%;
+    height:90%;
+    border-radius:100px;
+    background-image: url('https://www.imedialife.co.kr/news/photo/202102/34646_35359_3516.jpg');
+    background-size: contain;
+    margin-left:150px;
+}
+.photo2 {
+    width:12%;
+    height:90%;
+    border-radius:100px;
+    background-image: url('https://thumb.ac-illust.com/fd/fd4e47c9d93136763f5cd71409e3b5fe_t.jpeg');
+    background-size: contain;
+    margin-left:200px;
+}
 .rightTitle{
+    display:flex;
     width: 100%;
     height: 80px;
     text-align: center;
+    align-items:center;
     line-height: 80px;
-    border: 1px solid;
+    border: 1px solid skyblue;
+    border-radius:20px;
+    background-color:white;
+    color:black;
+    font-size:20px;
     margin-bottom: 20px;
 }
 .rightText{
     width: 100%;
     height: 77vh;
-    border: 1px solid;
+    border: 1px solid skyblue;
+    border-radius:20px;
+    background-color:white;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -34,18 +61,17 @@
     display: flex;
     flex-direction: column;
 }
-.leftTitle{
-    width: 100%;
-    height: 80px;
-    text-align: center;
-    line-height: 80px;
-    border: 1px solid;
-    margin-bottom: 20px;
-}
 .leftText{
     width: 100%;
     height: 77vh;
-    border: 1px solid;
+    border: 1px solid skyblue;
+    border-radius:20px;
+    background-color:white;
     overflow: scroll;
     overflow-x: hidden;
+}
+
+@font-face {
+    font-family:"Nanum Myeongjo";
+    src: url("./font/NanumMyeongjo-Regular.ttf");
 }

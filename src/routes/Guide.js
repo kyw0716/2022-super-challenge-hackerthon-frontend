@@ -4,15 +4,21 @@ function Guide() {
     return (
         <body className={style.guide}>
             <div className={style.rightBox}>
-                <div className={style.leftTitle}>질병관리청 지침</div>
-                <div className={style.leftText}>
-                    
+                <div className={style.rightTitle}>
+                    <div className={style.photo1}></div>
+                    질병관리청 지침
+                </div>
+                <div className={style.rightText}>
+
                 </div>
             </div>
             <div className={style.leftBox}>
-                <div className={style.rightTitle}>학교 지침</div>
-                <div className={style.rightText}>
-                    
+                <div className={style.rightTitle}>
+                    <div className={style.photo2}></div>
+                    학교 지침
+                </div>
+                <div className={style.leftText}>
+
                 </div>
             </div>
         </body>

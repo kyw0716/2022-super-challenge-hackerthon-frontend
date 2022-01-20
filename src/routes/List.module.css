@@ -16,6 +16,7 @@
     flex-direction:row;
     width:10%;
     align-items:center;
+    font-weight: bold;
 }
 
 @font-face {

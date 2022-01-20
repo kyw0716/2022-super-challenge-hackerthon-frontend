@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import style from "./Student.module.css";
 function Student() {
+    const go = () => {
+        window.location.href = "/listPage"
+    }
     return (
         <div className={style.student}>
             <div className={style.navBar}>
@@ -17,7 +20,7 @@ function Student() {
                     <div className={style.test}>
                         <span>자가진단</span><br />
                         <span>하러가기</span>
-                        <button className={style.testBtn}>Go!!</button>
+                        <button className={style.testBtn} onClick={go}>Go!!</button>
                     </div>
                     <div className={style.guide}>
                         <Link className={style.guide2} to="/guidePage">
