@@ -8,6 +8,7 @@ function Page() {
     const onSubmit = (e) => {
         e.preventDefault();
         console.log(con);
+        window.location.href="/studentPage";
     }
 
     return (
