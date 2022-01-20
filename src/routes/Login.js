@@ -1,25 +1,31 @@
 import { useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import styles from "./Login.module.css";
+import axios from "axios"
 
 function Login() {
     const [idValue, setIdValue] = useState("");
     const [pwValue, setPwValue] = useState("");
     const onChangeIdValue = (event) => {
-        setIdValue(event.target.value)
+        setIdValue(event.target.value);
     }
     const onChangePwValue = (event) => {
         setPwValue(event.target.value);
     }
     const onSubmit = (e) => {
         e.preventDefault();
-        fetch('/login',{
-            method : 'POST',
-            body : JSON.stringify({
-                "loginId" : idValue,
-                "password" : pwValue
-            })
-        }).then((response) => console.log(response));
+        axios.post('/login',{
+            "loginId" : idValue,
+            "password" : pwValue
+        }).then((response) => {
+            if(response.data === "LOGIN_SUCCESS"){
+                window.location.href = "/studentPage";
+            }
+            else{
+                alert("아이디 혹은 비밀번호를 확인해주세요");
+                window.location.href = "/loginPage";
+            }
+        });
     }
     return (
         <div className={styles.login}>
