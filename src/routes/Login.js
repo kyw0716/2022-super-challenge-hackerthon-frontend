@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import styles from "./Login.module.css";
-import axios from "axios"
+import axios from "axios";
 
 function Login() {
     const [idValue, setIdValue] = useState("");
