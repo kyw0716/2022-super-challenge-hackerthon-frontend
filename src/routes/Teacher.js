@@ -6,12 +6,17 @@ import { useEffect } from "react";
 
 function Teacher() {
     const [hurtPeople, setHurtPeople] = useState([]);
-
+    const [incheon, setIncheon] = useState([]);
+    useEffect(() => {
+        axios.get('https://api.corona-19.kr/korea/country/new/?serviceKey=14DrSTLUEibmjXfIlCZJkYs6yzO35NuGA'). then((response) => {
+            setIncheon([response.data.incheon.newCase, response.data.incheon.totalCase, response.data.incheon.newCcase])
+        })
+    }, []);
     useEffect(() => {
         axios.get('https://api.corona-19.kr/korea/?serviceKey=14DrSTLUEibmjXfIlCZJkYs6yzO35NuGA').then((response) => {
-            setHurtPeople([response.data.TotalCaseBefore,response.data.TotalCase,response.data.TodayDeath])
+            setHurtPeople([response.data.TotalCaseBefore, response.data.TotalCase, response.data.TodayDeath])
         });
-    },[]);
+    }, []);
     return (
         <div className={style.teacher}>
             <div className={style.name}>
@@ -23,15 +28,41 @@ function Teacher() {
                     <div className={style.number}>
                         <div className={style.get}>
                             확진자수
-                            <span>{`${hurtPeople[0]}`}</span>
-                            <div className={style.get2}>
-                                누적 확진
-                                <span>{`${hurtPeople[1]}`}</span>
-                            </div>
+                            <span>{` ${hurtPeople[0]}`}</span>
+                            명
+                            <ul>
+                                <li className={style.get2}>
+                                    누적 확진
+                                    <span>{` ${hurtPeople[1]}`}</span>
+                                    명
+                                </li>
+                                <li className={style.get2}>
+                                    사망자수
+                                    <span>{` ${hurtPeople[2]}`}</span>
+                                    명
+                                </li>
+                            </ul>
+
                         </div>
                         <div className={style.get}>
-                            사망자수
-                            <span>{`${hurtPeople[2]}`}</span>
+                            '인천' 지역 정보
+                            <ul>
+                                <li className={style.get2}>
+                                    확진자수
+                                    <span>{` ${incheon[0]}`}</span>
+                                    명
+                                </li>
+                                <li className={style.get2}>
+                                    누적 확진
+                                    <span>{` ${incheon[1]}`}</span>
+                                    명
+                                </li>
+                                <li className={style.get2}>
+                                    전일대비
+                                    <span>{` ${incheon[2]}`}</span>
+                                    명
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div className={style.notice}>
@@ -39,7 +70,7 @@ function Teacher() {
                     </div>
                     <div className={style.pointer}>
                         <Link className={style.point} to="/guidePage">
-                            지침
+                            ※ 지침 ※
                         </Link>
                     </div>
                 </div>

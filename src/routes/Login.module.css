@@ -12,7 +12,8 @@
     rgb(243, 249, 252) 0, rgb(243, 249, 252) 75%, white 0);
 }
 .span{
-    font-family:"Nanum Myeongjo";
+    font-family:"SCDream8";
+    color:skyblue;
     margin-bottom: 30px;
     font-size: 35px;
 }
@@ -76,4 +77,8 @@
 @font-face {
     font-family:"SongMyung";
     src: url("./font/SongMyung-Regular.ttf");
+}
+@font-face {
+    font-family:"SCDream8";
+    src: url("./font/SCDream8.otf");
 }

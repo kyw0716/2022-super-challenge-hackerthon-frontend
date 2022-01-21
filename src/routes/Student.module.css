@@ -27,7 +27,7 @@
 }
 .name {
     position:absolute;
-    right:0;
+    right:20px;
     top:40px;
     font-size:20px;
     font-family:"Nanum Myeongjo", serif;
@@ -41,7 +41,6 @@
     justify-content: space-around;
     align-items: center;
     font-family:"Nanum Myeongjo";
-    src: url("./font/NanumMyeongjo-Regular.ttf");
     font-weight:bold;
 }
 .leftContainer{
@@ -61,8 +60,9 @@
     width: 90%;
     border: 1px solid aliceblue;
     background-color:rgb(144, 194, 238);
-    font-size: 50px;
+    font-size: 48px;
     color:white;
+    font-family:"SCDream8";
 }
 .testBtn {
     width:80%;
@@ -84,6 +84,7 @@
     align-items: center;
     height: 10%;
     border: 3px solid rgb(144, 194, 238);
+    background-color:white;
     border-radius:30px;
 }
 .guide2 {
@@ -139,7 +140,6 @@
     font-family:"Nanum Myeongjo";
     border: 1px solid rgb(210, 237, 247);
     background-color: white;
-    src: url("./font/NanumMyeongjo-Regular.ttf");
     font-weight:bold;
 }
 
@@ -150,4 +150,8 @@
 @font-face {
     font-family:"SongMyung";
     src: url("./font/SongMyung-Regular.ttf");
+}
+@font-face {
+    font-family:"SCDream8";
+    src: url("./font/SCDream8.otf");
 }
