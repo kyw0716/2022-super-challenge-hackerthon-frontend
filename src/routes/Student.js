@@ -4,6 +4,7 @@ function Student() {
     const go = () => {
         window.location.href = "/listPage"
     }
+
     return (
         <div className={style.student}>
             <div className={style.navBar}>
