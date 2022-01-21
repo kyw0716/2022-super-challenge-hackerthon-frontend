@@ -16,9 +16,6 @@ function List({ q, setCon, setNumber, number}) {
         if(event.target.value === "yes"){
             setCon(true);
         }
-        else{
-            setCon(false);
-        }
     }
     return (
         <div className={style.list}>
