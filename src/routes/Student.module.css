@@ -7,7 +7,9 @@
     flex-direction: column;
     overflow-y: hidden;
     overflow-x: hidden;
-    background: linear-gradient(to top, aliceblue, white);
+    background: linear-gradient(45deg,
+    rgb(243, 249, 252) 25%, white 0, white 50%,
+    rgb(243, 249, 252) 0, rgb(243, 249, 252) 75%, white 0);
 }
 .navBar{
     width: 100%;

@@ -23,7 +23,7 @@ function Page() {
         <div className={style.Page}>
             <div className={style.page}>
                 <div className={style.top_bar}>
-                    <h1 className={style.title}>건강상태 자가진단</h1>
+                    <h1 className={style.title}>✔ 건강상태 자가진단</h1>
                     <Link className={style.back} to="/studentPage">처음으로</Link>
                 </div>
                 <form className={style.form}>

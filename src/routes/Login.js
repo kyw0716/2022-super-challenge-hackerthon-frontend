@@ -30,6 +30,7 @@ function Login() {
     return (
         <div className={styles.login}>
             <div className={styles.container}>
+                <span className={styles.span}>@ㅎㅏㅌㅔㄱㅇㅣㅁㅣㄹㅐㄷㅏㅇ</span>
                 <div className={styles.upBox}>
                     <form 
                         className={styles.formTag}

@@ -8,11 +8,9 @@
     align-items: center;
     font-family:"Nanum Myeongjo";
     font-weight:bold;
-    /* background-color:aliceblue;  */
     background: linear-gradient(45deg,
     rgb(243, 249, 252) 25%, white 0, white 50%,
     rgb(243, 249, 252) 0, rgb(243, 249, 252) 75%, white 0);
-    background-size: 40px 40px;
 }
 .rightBox{
     width: 40%;
