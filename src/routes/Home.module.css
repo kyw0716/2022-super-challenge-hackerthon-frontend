@@ -9,8 +9,7 @@
 .upBox{
     height: 55vh;
     width: 100%;
-    /* background-image: url('./background3.png');
-    background-size: cover; */
+    background-color:rgb(243, 250, 253);
 }
 .downBox{
     height: 45vh;
