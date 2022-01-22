@@ -7,11 +7,8 @@ import { useEffect } from "react";
 function Teacher() {
     const [hurtPeople, setHurtPeople] = useState([]);
     const [incheon, setIncheon] = useState([]);
-<<<<<<< HEAD
-    const [flip, setFlip] = useState(true);
-=======
->>>>>>> kyw-after-css
     const [vaccine, setVaccine] = useState(0);
+    const [flip, setFlip] = useState(true);
     const Vaccine = vaccine.toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
     useEffect(() => {
@@ -19,12 +16,9 @@ function Teacher() {
             setVaccine(response.data.incheon.vaccine_3.vaccine_3)
         })
     }, []);
-<<<<<<< HEAD
     const onClick = () =>{
         setFlip((current) => !current);
     }
-=======
->>>>>>> kyw-after-css
     useEffect(() => {
         axios.get('https://api.corona-19.kr/korea/country/new/?serviceKey=14DrSTLUEibmjXfIlCZJkYs6yzO35NuGA').then((response) => {
             setIncheon([response.data.incheon.newCase, response.data.incheon.totalCase]);
