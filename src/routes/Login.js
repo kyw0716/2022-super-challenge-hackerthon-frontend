@@ -6,11 +6,8 @@ import axios from "axios";
 function Login() {
     const [idValue, setIdValue] = useState("");
     const [pwValue, setPwValue] = useState("");
-    const [date, setDate] = useState([]);
     const onChangeIdValue = (event) => {
         setIdValue(event.target.value);
-        let d = new Date();
-        setDate([d.getMonth() + 1, d.getDate()]);
     }
     const onChangePwValue = (event) => {
         setPwValue(event.target.value);

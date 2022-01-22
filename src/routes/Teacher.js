@@ -4,31 +4,48 @@ import { useState } from "react/cjs/react.development";
 import axios from "axios";
 import { useEffect } from "react";
 
-function Teacher({name}) {
+function Teacher() {
     const [hurtPeople, setHurtPeople] = useState([]);
     const [incheon, setIncheon] = useState([]);
     const [vaccine, setVaccine] = useState(0);
     const [flip, setFlip] = useState(true);
+    const [name, setName] = useState("");
+    const [nameList, setNameList] = useState([]);
+    const [phoneList, setPhoneList] = useState([]);
     const Vaccine = vaccine.toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
     useEffect(() => {
         axios.get('https://api.corona-19.kr/korea/vaccine/?serviceKey=14DrSTLUEibmjXfIlCZJkYs6yzO35NuGA').then((response) => {
             setVaccine(response.data.incheon.vaccine_3.vaccine_3)
-        })
+        });
     }, []);
-    const onClick = () =>{
-        setFlip((current) => !current);
-    }
-    useEffect(() => {
+    useEffect(()=>{
         axios.get('https://api.corona-19.kr/korea/country/new/?serviceKey=14DrSTLUEibmjXfIlCZJkYs6yzO35NuGA').then((response) => {
             setIncheon([response.data.incheon.newCase, response.data.incheon.totalCase]);
-        })
-    }, []);
-    useEffect(() => {
+        });
+    },[]);
+    useEffect(()=>{
         axios.get('https://api.corona-19.kr/korea/?serviceKey=14DrSTLUEibmjXfIlCZJkYs6yzO35NuGA').then((response) => {
             setHurtPeople([response.data.TotalCaseBefore, response.data.TotalCase, response.data.TodayDeath, response.data.TotalDeath])
         });
-    }, []);
+    },[]);
+    useEffect(()=>{
+        axios.get('/home').then((response) => {
+            setName(response.data.name);
+        })
+    },[]);
+    useEffect(()=>{
+        axios.get('/check/search').then(axios.get('/check/send').then((response) => {
+            console.log(response);
+            for(let i = 0; i < response.data.length; i++){
+                setNameList((current) => [...current,response.data[i].name]);
+                setPhoneList((current) => [...current,response.data[i].phoneNumber]);
+            }
+        }))
+    },[]);
+    const onClick = () =>{
+        setFlip((current) => !current);
+    }
     return (
         <div className={style.teacher}>
             <div className={style.name}>
@@ -116,7 +133,14 @@ function Teacher({name}) {
                     <div className={style.lr}>
                         <button className={style.send}>알림 보내기</button>
                         <div className={style.list}>
-
+                            <div className={style.nameContainer}>
+                                <span className={style.alertElementTitle}>이름</span>
+                                {nameList.map(name => <span className={style.alertElement}>{name}</span>)}
+                            </div>
+                            <div className={style.phoneContainer}>
+                                <span className={style.alertElementTitle}>폰 번호</span>
+                                {phoneList.map(phone => <span className={style.alertElement}>{phone}</span>)}
+                            </div>
                         </div>
                         <button className={style.btn} onClick={onClick}>전환</button>
                     </div>  

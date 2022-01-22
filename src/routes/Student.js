@@ -1,10 +1,18 @@
+import axios from "axios";
+import { useEffect } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { useState } from "react/cjs/react.development";
 import style from "./Student.module.css";
-function Student({name}) {
+function Student() {
     const go = () => {
         window.location.href = "/listPage"
     }
-
+    const [name, setName] = useState("");
+    useEffect(()=>{
+        axios.get('/home').then((response) => {
+            setName(response.data.name);
+        })
+    },[]);
     return (
         <div className={style.student}>
             <div className={style.navBar}>

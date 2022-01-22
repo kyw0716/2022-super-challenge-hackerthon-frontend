@@ -23,7 +23,7 @@ module.exports = function(app) {
         })
     )
     app.use(
-        "/self_diagnosis",
+        "/self_diagnosis2",
         createProxyMiddleware({
             target:"http://localhost:8080",
             changeOrigin: true,
