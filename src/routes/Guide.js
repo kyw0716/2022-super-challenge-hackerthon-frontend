@@ -9,74 +9,43 @@ function Guide() {
                     질병관리청 지침
                 </div>
                 <div className={style.rightText}>
-                    왜 자꾸 두근 두근대죠
-                    이 내 가슴이 (자꾸만)
-                    터 터질거같죠(자꾸만)
-                    왜 자꾸 숨이 가파오죠
-                    미칠것같이 (자꾸만)
-                    수 숨이 막히죠 (자꾸만)
-                    첫 사랑도 아닌데
-                    순진한 건 아닌데
-                    그댄 자꾸만 또 또
-                    자꾸만 또 또
-                    느끼게 해 줘요
-                    그댄 나를 기쁘게 해요
-                    그댄 나를 느끼게 해요
-                    처 처음처럼
-                    처 처음처럼
-                    그댄 나를 미치게 해요
-                    자꾸 자꾸 원하게 해요
-                    처 처음처럼 처 처음처럼
-                    처 처음처럼 처 럼처럼
-                    처 처음처럼 처 럼처럼
-                    처 처음처럼 처럼 처 처 처음처럼
-                    척척척척척처음처럼
-                    왜 자꾸 열이 나는거죠
-                    온몸이 자꾸 (자꾸만)
-                    다 달아오르죠 (자꾸만)
-                    왜 자꾸 아찔아찔하죠
-                    정신이 없어 (자꾸만)
-                    저 죽을 거같죠 (자꾸만)
-                    사랑사랑 지금껏 말로만 했던건지
-                    그댈 만나고 난 느껴요 난
-                    진짜 사랑이 뭔지
-                    그댄 나를 기쁘게 해요
-                    그댄 나를 느끼게 해요
-                    처 처음처럼 처 처음처럼
-                    그댄 나를 미치게 해요
-                    자꾸 자꾸 원하게 해요
-                    처 처음처럼 처 처음처럼
-                    처 처음처럼 처럼처럼
-                    처 처음처럼 처럼처럼
-                    처 처음처럼 처럼 처 처 처음처럼
-                    리무진에 샴페인 블링블링
-                    jewerly chain
-                    나를 원해 목이 메인 그런남자
-                    Oh no
-                    항상 발길에 채이는 그런 남잔
-                    Just pain dont wanna play this game
-                    꺼져버려 이젠
-                    Now I wanna pump up my gain
-                    This is bout my man Youre the only man
-                    넌 나를 너무 잘 알기에
-                    나를 기쁘게 기쁘게 기쁘게 해줘(Ho)
-                    나를 느끼게 느끼게 느끼게 해줘(Ho)
-                    그댄 나를 기쁘게 해요
-                    그댄 나를 느끼게 해요
-                    처 처음처럼 처 처음처럼
-                    그댄 나를 미치게 해요
-                    자꾸 자꾸 원하게 해요
-                    처 처음처럼 처 처음처럼
-                    처 처음처럼 처럼처럼
-                    처 처음처럼 처럼처럼
-                    처 처음처럼 처럼 처 처 처 처럼처럼
-
+                <table className={style.table}>
+                        <tr className={style.line1}>
+                            <th className={style.line3}>목차</th>
+                            <th>주요사항</th>
+                        </tr>
+                        <tr className={style.line2}>
+                            <td> 공통</td>
+                            <td> ✓ 국내/외 예방접종완료자 유효기간 명시
+                            : 2차접종자는 접종완료 후 14일이 경과한 날부터 180일까지, 3차접종자는 접종 즉시 유효(유효기간 만료일 없음)
+                            </td>
+                        </tr>
+                        <tr className={style.line2}>
+                            <td>사례정의</td>
+                            <td>✓ 국내·외 예방접종완료자 정의 수정
+                            : 2차 접종을 완료하거나 2차 접종 후 3차(부스터) 접종을 완료한 자
+                            </td>
+                        </tr>
+                        <tr className={style.line2}>
+                            <td>확진환자 발생 시 조치</td>
+                            <td>✓ 해외입국 확진자 재택치료 적용 안내(旣 시행중)
+                            : 재택 또는 병원 또는 생활치료센터로 이송</td>
+                        </tr>
+                        <tr className={style.line2}>
+                            <td>접촉자 관리</td>
+                            <td>✓ 예방접종완료자 수동감시 중 PCR검사 안내
+                                : 수동감시로 전환한 이후라도 6~7일차 PCR검사 실시
+                                ✓ 오미크론 변이 관련 역학조사 및 접촉자 관리 방안 변경 안내(1.3.~)
+                                : 오미크론 관련 밀접접촉자는 10일간 자가격리
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div className={style.leftBox}>
                 <div className={style.rightTitle}>
                     <div className={style.photo2}></div>
-                    학교 지침
+                    교육청 지침
                 </div>
                 <div className={style.leftText}>
                     <table className={style.table}>
