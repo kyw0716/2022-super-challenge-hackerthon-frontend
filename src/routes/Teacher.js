@@ -27,9 +27,11 @@ function Teacher() {
                 <div className={style.lr}>
                     <div className={style.number}>
                         <div className={style.get}>
-                            확진자수
-                            <span>{` ${hurtPeople[0]}`}</span>
-                            명
+                            <div className={style.title}>
+                                확진자수
+                                <span>{` ${hurtPeople[0]}`}</span>
+                                 명
+                            </div>                            
                             <ul>
                                 <li className={style.get2}>
                                     누적 확진
@@ -45,7 +47,9 @@ function Teacher() {
 
                         </div>
                         <div className={style.get}>
+                            <div className={style.title}>
                             '인천' 지역 정보
+                            </div>          
                             <ul>
                                 <li className={style.get2}>
                                     확진자수
