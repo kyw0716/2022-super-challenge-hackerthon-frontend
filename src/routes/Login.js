@@ -24,7 +24,7 @@ function Login() {
             if (response.data === "LOGIN_SUCCESS") {
                 setIdValue('');
                 setPwValue('');
-                window.location.href = "/studentPage";
+                window.location.href="/afterLoginPage";
             }
             else {
                 alert("아이디 혹은 비밀번호를 확인해주세요");

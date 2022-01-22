@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import style from "./Student.module.css";
-function Student() {
+function Student({name}) {
     const go = () => {
         window.location.href = "/listPage"
     }
@@ -12,7 +12,7 @@ function Student() {
                     Hightech-school
                 </div>
                 <div className={style.name}>
-                    000님, 환영합니다!
+                    {name}님, 환영합니다!
                 </div>
             </div>
             <hr />

@@ -4,7 +4,7 @@ import { useState } from "react/cjs/react.development";
 import axios from "axios";
 import { useEffect } from "react";
 
-function Teacher() {
+function Teacher({name}) {
     const [hurtPeople, setHurtPeople] = useState([]);
     const [incheon, setIncheon] = useState([]);
     const [vaccine, setVaccine] = useState(0);
@@ -33,7 +33,7 @@ function Teacher() {
         <div className={style.teacher}>
             <div className={style.name}>
                 <h1 className={style.school}>Hightech-school</h1>
-                <h3 className={style.welcome}>김영우 선생님, 환영합니다!</h3>
+                <h3 className={style.welcome}>{name} 선생님, 환영합니다!</h3>
             </div>
             <div className={style.bottom}>
                 <div className={style.lr}>
