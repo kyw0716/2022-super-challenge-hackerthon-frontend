@@ -6,6 +6,7 @@ import Signup from "./routes/Signup";
 import Student from "./routes/Student";
 import Teacher from "./routes/Teacher";
 import Page from "./routes/Page";
+import AfterLogin from "./routes/AfterLogin";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path="/signupPage">
           <Signup/>
+        </Route>
+        <Route path="/afterLoginPage">
+          <AfterLogin/>
         </Route>
         <Route path="/loginPage">
           <Login/>

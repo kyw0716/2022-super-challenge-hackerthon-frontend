@@ -9,6 +9,7 @@ function Signup() {
     const [ageValue, setAgeValue] = useState("");
     const [genderValue, setGenderValue] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
     const redirect = () =>{
         window.location.href = "/loginPage";
     }
@@ -33,6 +34,9 @@ function Signup() {
     const genderChange = (e) =>{
         setGenderValue(e.target.value);
     }
+    const phoneNumberChange = (e) =>{
+        setPhoneNumber(e.target.value);
+    }
     const onSubmit = (e) =>{
         e.preventDefault();
         fetch("/members/sign_up",{
@@ -43,7 +47,8 @@ function Signup() {
                 "name" : nameValue,
                 "age" : ageValue,
                 "gender" : genderValue,
-                "job" : jobValue
+                "job" : jobValue,
+                "phoneNumber" : phoneNumber
             })
         }).then(redirect);
     }
@@ -95,6 +100,16 @@ function Signup() {
                         name="name"
                         placeholder="NAME"
                         onChange={nameChange}
+                    />
+                </div>
+                <div className={styles.smallDiv}>
+                    <label htmlFor="phoneNumber">전화번호 </label>
+                    <input
+                        className={styles.input}
+                        id="phoneNumber"
+                        name="phoneNumber"
+                        placeholder="PHONENUMBER"
+                        onChange={phoneNumberChange}
                     />
                 </div>
                 <div className={styles.smallDiv}>
