@@ -33,17 +33,17 @@ function Student() {
                     <div className={style.box}>
                         <span className={style.boxTitle}>부작용 신고</span>
                         <div className={style.picture1}></div>
-                        <button className={style.link}>바로가기</button>
+                        <button className={style.link} onClick={()=>{window.location.href="https://ncv.kdca.go.kr/menu.es?mid=a12601010000"}}>바로가기</button>
                     </div>
                     <div className={style.box}>
                         <span className={style.boxTitle}>백신예약</span>
                         <div className={style.picture2}></div>
-                        <button className={style.link}>바로가기</button>
+                        <button className={style.link} onClick={()=>{window.location.href="https://relay.kdca.go.kr/cobk/rsrv/web/getVcnRsrvCnfm.do?tokKey=67bfa439bddefc7c731e8443eecc55926db9a6c88a40bfc2a8640b088ed2db5aed9056f3296c2cbf98f532c85b2f4565c8f291d2fef7c582c621e722fd5fffe3a6aa9ae8deef98d49ad99d5aa11127c226d7a1b4b4fd0d7217333a2972d30575e76291e0688d88906b23"}}>바로가기</button>
                     </div>
                     <div className={style.box}>
                         <span className={style.boxTitle}>예방접종 도우미</span>
                         <div className={style.picture3}></div>
-                        <button className={style.link}>바로가기</button>
+                        <button className={style.link} onClick={()=>{window.location.href="https://nip.kdca.go.kr/irgd/index.html"}}>바로가기</button>
                     </div>
                 </div>
             </div>
