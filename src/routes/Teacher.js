@@ -105,7 +105,7 @@ function Teacher() {
                             <span> <span className={style.red}>**</span> 구체적 사항은 교육청 지침 참고 !</span>   
                         </div>
                     </div>
-                    <div className={style.pointer} onClick={() => {window.location.href = "/guidePage"}}>
+                    <div className={style.pointer} onClick={() => {window.open("/guidePage")}}>
                         <Link className={style.point} to="/guidePage">
                             ※ 지침 ※
                         </Link>
