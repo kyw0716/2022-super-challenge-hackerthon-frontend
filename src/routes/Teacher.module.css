@@ -113,6 +113,15 @@ h3{
     font-size:20px;
     font-weight:bold;
 }
+.Gongji {
+    margin-top:15px;
+    display:flex;
+    flex-direction: column;
+    text-align:left;
+}
+.blue {
+    color:blue;
+}
 .pointer {
     text-align:center;
     width:100%;
