@@ -7,14 +7,22 @@ import { useEffect } from "react";
 function Teacher() {
     const [hurtPeople, setHurtPeople] = useState([]);
     const [incheon, setIncheon] = useState([]);
+    const [vaccine, setVaccine] = useState(0);
+    const Vaccine = vaccine.toString()
+      .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    useEffect(() => {
+        axios.get('https://api.corona-19.kr/korea/vaccine/?serviceKey=14DrSTLUEibmjXfIlCZJkYs6yzO35NuGA').then((response) => {
+            setVaccine(response.data.incheon.vaccine_3.vaccine_3)
+        })
+    }, []);
     useEffect(() => {
         axios.get('https://api.corona-19.kr/korea/country/new/?serviceKey=14DrSTLUEibmjXfIlCZJkYs6yzO35NuGA').then((response) => {
-            setIncheon([response.data.incheon.newCase, response.data.incheon.totalCase, response.data.incheon.newCcase])
+            setIncheon([response.data.incheon.newCase, response.data.incheon.totalCase])
         })
     }, []);
     useEffect(() => {
         axios.get('https://api.corona-19.kr/korea/?serviceKey=14DrSTLUEibmjXfIlCZJkYs6yzO35NuGA').then((response) => {
-            setHurtPeople([response.data.TotalCaseBefore, response.data.TotalCase, response.data.TodayDeath])
+            setHurtPeople([response.data.TotalCaseBefore, response.data.TotalCase, response.data.TodayDeath, response.data.TotalDeath])
         });
     }, []);
     return (
@@ -27,33 +35,48 @@ function Teacher() {
                 <div className={style.lr}>
                     <div className={style.number}>
                         <div className={style.get}>
-                            <div className={style.title}>
-                                확진자수
-                                <span>{` ${hurtPeople[0]}`}</span>
-                                 명
-                            </div>                            
+                            <div className={style.title_real}>
+                                <div className={style.pic1}></div>
+                                <div className={style.title}>
+                                    '대한민국' 전체 정보
+                                </div>         
+                            </div>                                               
                             <ul>
+                                <li className={style.get2}>
+                                    확진자수
+                                    <span> {` `} </span>
+                                    <span className={style.number_color}>{`${hurtPeople[0]}`}</span>
+                                    명
+                                </li> 
+                                <li className={style.get2}>
+                                    사망자
+                                    <span>{` ${hurtPeople[2]}`}</span>
+                                    명
+                                </li>  
                                 <li className={style.get2}>
                                     누적 확진
                                     <span>{` ${hurtPeople[1]}`}</span>
                                     명
                                 </li>
                                 <li className={style.get2}>
-                                    사망자수
-                                    <span>{` ${hurtPeople[2]}`}</span>
+                                    누적 사망자
+                                    <span>{` ${hurtPeople[3]}`}</span>
                                     명
                                 </li>
                             </ul>
-
                         </div>
                         <div className={style.get}>
-                            <div className={style.title}>
-                            '인천' 지역 정보
-                            </div>          
+                            <div className={style.title_real}>
+                                <div className={style.pic2}></div>
+                                <div className={style.title}>
+                                    '인천' 지역 정보
+                                </div>          
+                            </div>                    
                             <ul>
                                 <li className={style.get2}>
                                     확진자수
-                                    <span>{` ${incheon[0]}`}</span>
+                                    <span> {` `} </span>
+                                    <span className={style.number_color}>{`${incheon[0]}`}</span>
                                     명
                                 </li>
                                 <li className={style.get2}>
@@ -62,8 +85,8 @@ function Teacher() {
                                     명
                                 </li>
                                 <li className={style.get2}>
-                                    전일대비
-                                    <span>{` ${incheon[2]}`}</span>
+                                    3차 접종
+                                    <span>{` ${Vaccine}`}</span>
                                     명
                                 </li>
                             </ul>
