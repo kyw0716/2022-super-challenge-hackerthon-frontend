@@ -12,6 +12,8 @@ function Teacher() {
     const [name, setName] = useState("");
     const [nameList, setNameList] = useState([]);
     const [phoneList, setPhoneList] = useState([]);
+    const [stopName, setStopName] = useState([]);
+    const [stopPhone, setStopPhone] = useState([]);
     const Vaccine = vaccine.toString()
       .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
     useEffect(() => {
@@ -35,22 +37,36 @@ function Teacher() {
         })
     },[]);
     useEffect(()=>{
-        axios.get('/check/search').then(axios.get('/check/send').then((response) => {
-            console.log(response);
-            for(let i = 0; i < response.data.length; i++){
-                setNameList((current) => [...current,response.data[i].name]);
-                setPhoneList((current) => [...current,response.data[i].phoneNumber]);
-            }
-        }))
+        axios.get('/check/search')
+            .then((response) => {
+                for(let i = 0; i < response.data.length; i++){
+                    if(response.data[i].stop_going_school === true){
+                        setStopName((current) => [...current,response.data[i].name]);
+                        setStopPhone((current) => [...current,response.data[i].phoneNumber]);
+                    }
+                }
+                axios.get('/check/send')
+                .then((response2) => {
+                    for(let i = 0; i < response2.data.length; i++){
+                        setNameList((current) => [...current,response2.data[i].name]);
+                        setPhoneList((current) => [...current,response2.data[i].phoneNumber]);
+                    }
+                })
+            })
     },[]);
     const onClick = () =>{
         setFlip((current) => !current);
+    }
+    const logout = () =>{
+        axios.post('/logout').then((response) =>{
+            window.location.href="/";
+        })
     }
     return (
         <div className={style.teacher}>
             <div className={style.name}>
                 <h1 className={style.school}>Hightech-school</h1>
-                <h3 className={style.welcome}>{name} 선생님, 환영합니다!</h3>
+                <h3 className={style.welcome}>{name} 선생님, 환영합니다!<button onClick={logout} className={style.btn2}>logout</button></h3>
             </div>
             <div className={style.bottom}>
                 <div className={style.lr}>
@@ -148,7 +164,14 @@ function Teacher() {
                     <div className={style.lr}>
                         <div className={style.send}>이상 학생 목록</div>
                         <div className={style.list}>
-
+                            <div className={style.nameContainer}>
+                                <span className={style.alertElementTitle}>이름</span>
+                                {stopName.map(name => <span className={style.alertElement}>{name}</span>)}
+                            </div>
+                            <div className={style.phoneContainer}>
+                                <span className={style.alertElementTitle}>폰 번호</span>
+                                {stopPhone.map(phone => <span className={style.alertElement}>{phone}</span>)}
+                            </div>
                         </div>
                         <button className={style.btn} onClick={onClick}>전환</button>
                     </div>

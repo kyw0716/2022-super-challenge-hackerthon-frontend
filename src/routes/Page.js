@@ -16,19 +16,14 @@ function Page() {
     },[]);
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log("month = ", month);
-        console.log("day = ", day);
-        console.log("check = ", con);
         axios.post("/self_diagnosis2/write",{
             "day" : day,
             "month" : month,
             "check" : con
-        }).then((response) => {
-            console.log(response);
-        });
-        // if(number === 3){
-        //     window.location.href="/studentPage";
-        // }
+        })
+        if(number === 3){
+            window.location.href="/studentPage";
+        }
     }
     const text = [
         ["1. 귀하는 코로나 19가 의심되는 아래의 임상증상*이 있나요?", <br />, "*(주요 임상증상) 발열(37.5도 이상), 기침, 호흡곤란, 오한, 근육통, 두통, 인후통, 후각-미각소실", <br />, "※단 학교에서 선별진료소 검사결과(음성)을 확인 후 등교를 허용한 경우, 또는 선천성 질환-만성질환(천식 등)으로  인한 증상인 경우 '아니오'를 선택하시오."],

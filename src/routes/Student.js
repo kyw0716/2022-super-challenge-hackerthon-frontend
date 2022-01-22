@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react/cjs/react.development";
 import style from "./Student.module.css";
+import styles from "./Teacher.module.css";
+
 function Student() {
     const go = () => {
         window.location.href = "/listPage"
@@ -13,6 +15,11 @@ function Student() {
             setName(response.data.name);
         })
     },[]);
+    const logout = () =>{
+        axios.post('/logout').then(()=>{
+            window.location.href = "/";
+        })
+    }
     return (
         <div className={style.student}>
             <div className={style.navBar}>
@@ -21,6 +28,7 @@ function Student() {
                 </div>
                 <div className={style.name}>
                     {name}님, 환영합니다!
+                    <button onClick={logout} className={styles.btn2}>logout</button>
                 </div>
             </div>
             <hr />
