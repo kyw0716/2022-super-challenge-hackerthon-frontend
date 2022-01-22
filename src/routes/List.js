@@ -16,16 +16,13 @@ function List({ q, setCon, setNumber, number}) {
         if(event.target.value === "yes"){
             setCon(true);
         }
-        else{
-            setCon(false);
-        }
     }
     return (
         <div className={style.list}>
             <div className={style.question}>
                 <Item text={q} />
             </div>
-            <div className="answer">
+            <div className={style.answer}>
                 <label htmlFor="yes">예</label>
                 <input id="yes" type="radio" value="yes" name={number} onClick={onChange} />
                 <label htmlFor="no">아니요</label>

@@ -8,7 +8,6 @@
     background: linear-gradient(45deg,
     rgb(243, 249, 252) 25%, white 0, white 50%,
     rgb(243, 249, 252) 0, rgb(243, 249, 252) 75%, white 0);
-    background-size: 40px 40px;
 }
 .formBox{
     display: flex;
@@ -17,15 +16,16 @@
     height: 420px;
     margin-top: 20vh;
     background-color:white;
-    font-family:"Nanum Myeongjo";
+    font-family:"Nanum Myeongjo", serif;
     font-weight:bold;
     padding: 40px 40px;
-    border: 1px solid skyblue;
+    border: 1px solid rgb(218, 241, 253);
 }
 .logo{
     font-size: 24px;
     font-weight: bold;
     position: absolute;
+    font-family:"Nanum Myeongjo", serif;
     top: 60px;
     color:rgb(119, 208, 243);
 }

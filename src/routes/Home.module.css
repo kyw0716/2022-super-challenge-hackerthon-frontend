@@ -7,12 +7,14 @@
     flex-direction: column;
 }
 .upBox{
-    height: 55vh;
+    height: 57vh;
     width: 100%;
     background-color:rgb(243, 250, 253);
 }
 .downBox{
-    height: 45vh;
+    bottom: 0;
+    position: absolute;
+    height: 120px;
     width: 100%;
     background-image: url('./background5.png');
 }
