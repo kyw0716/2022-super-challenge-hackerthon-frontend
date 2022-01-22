@@ -7,24 +7,41 @@
     flex-direction: column;
     overflow-y: hidden;
     overflow-x: hidden;
+    background: linear-gradient(45deg,
+    rgb(243, 249, 252) 25%, white 0, white 50%,
+    rgb(243, 249, 252) 0, rgb(243, 249, 252) 75%, white 0);
 }
 .navBar{
     width: 100%;
     height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-hr{
-    width: 100%;
-    margin: 0;
+.logo {
+    margin-top:19px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 40px;
+    font-weight:bold;
+    font-family:"SongMyung", serif;
+    color: skyblue;
 }
+.name {
+    position:absolute;
+    right:20px;
+    top:40px;
+    font-size:20px;
+    font-family:"Nanum Myeongjo", serif;
+    font-weight:bold;
+}
+
 .mainContainer{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family:"Nanum Myeongjo";
+    font-weight:bold;
 }
 .leftContainer{
     flex: 1;
@@ -41,7 +58,24 @@ hr{
     justify-content: center;
     align-items: center;
     width: 90%;
-    border: 1px solid;
+    border: 1px solid aliceblue;
+    background-color:rgb(144, 194, 238);
+    font-size: 48px;
+    color:white;
+    font-family:"SCDream8";
+}
+.testBtn {
+    width:80%;
+    height:15%;
+    font-size: 20px;
+    margin-top:30px;
+    font-family:"Nanum Myeongjo";
+    src: url("./font/NanumMyeongjo-Regular.ttf");
+    font-weight:bold;
+    border:1px solid white;
+    background-color:white;
+    border-radius:20px; 
+    
 }
 .guide{
     width: 90%;
@@ -49,7 +83,13 @@ hr{
     justify-content: center;
     align-items: center;
     height: 10%;
-    border: 1px solid;
+    border: 3px solid rgb(144, 194, 238);
+    background-color:white;
+    border-radius:30px;
+}
+.guide2 {
+    color:black;
+    font-size:20px;
 }
 .rightContainer{
     flex: 1.5;
@@ -63,19 +103,55 @@ hr{
     display: flex;
     flex-direction: column;
     height: 85%;
-    border: 1px solid;
+    border: 1px solid rgb(210, 237, 247);
+    background-color: rgb(210, 237, 247);
     width: 30%;
     justify-content: space-around;
     align-items: center;
 }
-.picture{
-    width: 80%;
-    height: 28%;
-    border: 1px solid;
-    border-radius: 200px;
+.picture1{
+    width: 64%;
+    height: 38%;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-image: url("https://en.pimg.jp/074/852/310/1/74852310.jpg");
+    background-size:cover;
+}
+.picture2 {
+    width: 64%;
+    height: 38%;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-image: url("https://en.pimg.jp/073/372/154/1/73372154.jpg");
+    background-size: cover;
+}
+.picture3 {
+    width: 64%;
+    height: 38%;
+    border: 1px solid white;
+    border-radius:50%;
+    background-image: url("https://media.istockphoto.com/vectors/dental-assistant-vector-id1281615439");
+    background-size:contain;
 }
 .link{
     width: 80%;
     height: 50px;
     border-radius: 150px;
+    font-family:"Nanum Myeongjo";
+    border: 1px solid rgb(210, 237, 247);
+    background-color: white;
+    font-weight:bold;
+}
+
+@font-face {
+    font-family:"Nanum Myeongjo";
+    src: url("./font/NanumMyeongjo-Regular.ttf");
+}
+@font-face {
+    font-family:"SongMyung";
+    src: url("./font/SongMyung-Regular.ttf");
+}
+@font-face {
+    font-family:"SCDream8";
+    src: url("./font/SCDream8.otf");
 }

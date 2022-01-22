@@ -1,17 +1,27 @@
 .login{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100vh;
     margin: 0;
     padding: 0;
-    flex-direction: column;
+    background: linear-gradient(45deg,
+    rgb(243, 249, 252) 25%, white 0, white 50%,
+    rgb(243, 249, 252) 0, rgb(243, 249, 252) 75%, white 0);
+}
+.span{
+    font-family:"SCDream8";
+    color:skyblue;
+    margin-bottom: 30px;
+    font-size: 35px;
 }
 .container{
     width: 50%;
-    height: 50vh;
-    border: 1px solid;
+    height: 60vh;
+    border: 1px solid rgb(218, 241, 253);
+    background-color:white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,18 +50,35 @@
 .input{
     width: 95%;
     height: 40%;
+    border: 1px solid skyblue;
 }
 .btn{
     width: 15%;
     height: 98%;
+    border: 1px solid rgb(172, 218, 236);
+    background-color:rgb(172, 218, 236);
+    color:white;
 }
 .idPw{
     display: flex;
     justify-content: flex-start;
     width: 60%;
     margin-left: 5px;
+    color:gray;
+    font-family:"SongMyung";
 }
 .link{
-    text-decoration: none;
-    color: black;
+    color: gray;
+}
+@font-face {
+    font-family:"Nanum Myeongjo";
+    src: url("./font/NanumMyeongjo-Regular.ttf");
+}
+@font-face {
+    font-family:"SongMyung";
+    src: url("./font/SongMyung-Regular.ttf");
+}
+@font-face {
+    font-family:"SCDream8";
+    src: url("./font/SCDream8.otf");
 }
