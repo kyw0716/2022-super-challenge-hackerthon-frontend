@@ -19,6 +19,8 @@ function Login() {
             "password" : pwValue
         }).then((response) => {
             if(response.data === "LOGIN_SUCCESS"){
+                setIdValue('');
+                setPwValue('');
                 window.location.href = "/studentPage";
             }
             else{
@@ -43,6 +45,7 @@ function Login() {
                                 onChange={onChangeIdValue}
                                 type="text"
                                 name="loginId"
+                                value={idValue}
                             />
                             <input
                                 className={styles.input}
@@ -50,6 +53,7 @@ function Login() {
                                 onChange={onChangePwValue}
                                 type="password"
                                 name="password"
+                                value={pwValue}
                             />
                         </div>
                         <button className={styles.btn}>log in</button>

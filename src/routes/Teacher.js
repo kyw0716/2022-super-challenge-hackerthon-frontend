@@ -8,7 +8,7 @@ function Teacher() {
     const [hurtPeople, setHurtPeople] = useState([]);
     const [incheon, setIncheon] = useState([]);
     useEffect(() => {
-        axios.get('https://api.corona-19.kr/korea/country/new/?serviceKey=14DrSTLUEibmjXfIlCZJkYs6yzO35NuGA'). then((response) => {
+        axios.get('https://api.corona-19.kr/korea/country/new/?serviceKey=14DrSTLUEibmjXfIlCZJkYs6yzO35NuGA').then((response) => {
             setIncheon([response.data.incheon.newCase, response.data.incheon.totalCase, response.data.incheon.newCcase])
         })
     }, []);
