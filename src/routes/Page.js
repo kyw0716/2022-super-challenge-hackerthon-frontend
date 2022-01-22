@@ -1,14 +1,26 @@
 import style from "./Page.module.css"
 import List from "./List.js"
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Page() {
     const [con, setCon] = useState(false);
     const [number, setNumber] = useState(0);
+    const [day, setDay] = useState(0);
+    const [month, setMonth] = useState(0);
+    useEffect(()=>{
+        let d = new Date();
+        setDay(d.getDate());
+        setMonth(d.getMonth() + 1);
+    },[]);
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log(con);
+        axios.post("/self_diagnosis2/write",{
+            "day" : day,
+            "month" : month,
+            "check" : con
+        })
         if(number === 3){
             window.location.href="/studentPage";
         }

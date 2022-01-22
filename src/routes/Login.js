@@ -6,11 +6,8 @@ import axios from "axios";
 function Login() {
     const [idValue, setIdValue] = useState("");
     const [pwValue, setPwValue] = useState("");
-    const [date, setDate] = useState([]);
     const onChangeIdValue = (event) => {
         setIdValue(event.target.value);
-        let d = new Date();
-        setDate([d.getMonth() + 1, d.getDate()]);
     }
     const onChangePwValue = (event) => {
         setPwValue(event.target.value);
@@ -24,7 +21,7 @@ function Login() {
             if (response.data === "LOGIN_SUCCESS") {
                 setIdValue('');
                 setPwValue('');
-                window.location.href = "/studentPage";
+                window.location.href="/afterLoginPage";
             }
             else {
                 alert("아이디 혹은 비밀번호를 확인해주세요");
