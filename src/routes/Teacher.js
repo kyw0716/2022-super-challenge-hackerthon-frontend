@@ -72,7 +72,7 @@ function Teacher() {
                     <div className={style.notice}>
                         공지사항
                     </div>
-                    <div className={style.pointer}>
+                    <div className={style.pointer} onClick={() => {window.location.href = "/guidePage"}}>
                         <Link className={style.point} to="/guidePage">
                             ※ 지침 ※
                         </Link>

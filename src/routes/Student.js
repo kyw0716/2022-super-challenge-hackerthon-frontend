@@ -23,7 +23,7 @@ function Student() {
                         <span>하러가기</span>
                         <button className={style.testBtn} onClick={go}>Go!!</button>
                     </div>
-                    <div className={style.guide}>
+                    <div className={style.guide} onClick={() => {window.location.href = "/guidePage"}}>
                         <Link className={style.guide2} to="/guidePage">
                             ※ 지침 ※
                         </Link>
