@@ -10,7 +10,7 @@ import AfterLogin from "./routes/AfterLogin";
 
 function App() {
   return (
-    <Router basename="/hackerthon-practice">
+    <Router>
       <Switch>
         <Route path="/listPage">
           <Page/>
