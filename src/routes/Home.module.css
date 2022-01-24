@@ -16,7 +16,7 @@
     position: absolute;
     height: 120px;
     width: 100%;
-    background-image: url('./background5.png');
+    background-image: url('../../public/background5.png');
 }
 .student{
     position: absolute;

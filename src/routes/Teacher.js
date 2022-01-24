@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import style from "./Teacher.module.css"
 import { useState } from "react/cjs/react.development";
 import axios from "axios";
 import { useEffect } from "react";
+import StudentList from "../components/StudentList";
+import Korea from "../components/Korea";
+import Incheon from "../components/Incheon";
+import Notice from "../components/Notice";
+import GuideButton from "../components/GuideButton";
+import NavBar from "../components/NavBar";
 
 function Teacher() {
     const [hurtPeople, setHurtPeople] = useState([]);
@@ -54,127 +59,27 @@ function Teacher() {
                 })
             })
     },[]);
-    const onClick = () =>{
-        setFlip((current) => !current);
-    }
     const logout = () =>{
-        axios.post('/logout').then((response) =>{
+        axios.post('/logout').then(() =>{
             window.location.href="/";
         })
     }
     return (
         <div className={style.teacher}>
-            <div className={style.name}>
-                <h1 className={style.school}>Hightech-school</h1>
-                <h3 className={style.welcome}>{name} 선생님, 환영합니다!<button onClick={logout} className={style.btn2}>logout</button></h3>
-            </div>
+            <NavBar job={"선생님"} name={name} logout={logout} />
             <div className={style.bottom}>
                 <div className={style.lr}>
                     <div className={style.number}>
-                        <div className={style.get}>
-                            <div className={style.title_real}>
-                                <div className={style.pic1}></div>
-                                <div className={style.title}>
-                                    '대한민국' 전체 정보
-                                </div>         
-                            </div>                                               
-                            <ul>
-                                <li className={style.get2}>
-                                    확진자수
-                                    <span> {` `} </span>
-                                    <span className={style.number_color}>{`${hurtPeople[0]}`}</span>
-                                    명
-                                </li> 
-                                <li className={style.get2}>
-                                    사망자
-                                    <span>{` ${hurtPeople[2]}`}</span>
-                                    명
-                                </li>  
-                                <li className={style.get2}>
-                                    누적 확진
-                                    <span>{` ${hurtPeople[1]}`}</span>
-                                    명
-                                </li>
-                                <li className={style.get2}>
-                                    누적 사망자
-                                    <span>{` ${hurtPeople[3]}`}</span>
-                                    명
-                                </li>
-                            </ul>
-                        </div>
-                        <div className={style.get}>
-                            <div className={style.title_real}>
-                                <div className={style.pic2}></div>
-                                <div className={style.title}>
-                                    '인천' 지역 정보
-                                </div>          
-                            </div>                    
-                            <ul>
-                                <li className={style.get2}>
-                                    확진자수
-                                    <span> {` `} </span>
-                                    <span className={style.number_color}>{`${incheon[0]}`}</span>
-                                    명
-                                </li>
-                                <li className={style.get2}>
-                                    누적 확진
-                                    <span>{` ${incheon[1]}`}</span>
-                                    명
-                                </li>
-                                <li className={style.get2}>
-                                    3차 접종
-                                    <span>{` ${Vaccine}`}</span>
-                                    명
-                                </li>
-                            </ul>
-                        </div>
+                        <Korea hurtPeople={hurtPeople} />
+                        <Incheon incheon={incheon} Vaccine={Vaccine} />
                     </div>
-                    <div className={style.notice}>
-                        공지사항
-                        <div className={style.Gongji}>
-                            <span> <span className={style.blue}>who?</span> 확진, 격리 통지받은 학생 </span>
-                            <span> <span className={style.blue}>when?</span> 보건당국의 입원치료 통지 또는 격리 통지 시부터 격리 해제시까지</span>
-                            <span> <span className={style.blue}>what?</span> 입원치료통지서, 격리통지서</span>
-                            <span> <span className={style.red}>**</span> 구체적 사항은 교육청 지침 참고 !</span>   
-                        </div>
-                    </div>
-                    <div className={style.pointer} onClick={() => {window.open("/guidePage")}}>
-                        <Link className={style.point} to="/guidePage">
-                            ※ 지침 ※
-                        </Link>
-                    </div>
+                    <Notice />
+                    <GuideButton style1={style.pointer} style2={style.point}/>
                 </div>
                 {flip ? 
-                    
-                    <div className={style.lr}>
-                        <button className={style.send}>알림 보내기</button>
-                        <div className={style.list}>
-                            <div className={style.nameContainer}>
-                                <span className={style.alertElementTitle}>이름</span>
-                                {nameList.map(name => <span className={style.alertElement}>{name}</span>)}
-                            </div>
-                            <div className={style.phoneContainer}>
-                                <span className={style.alertElementTitle}>폰 번호</span>
-                                {phoneList.map(phone => <span className={style.alertElement}>{phone}</span>)}
-                            </div>
-                        </div>
-                        <button className={style.btn} onClick={onClick}>전환</button>
-                    </div>  
-                     : 
-                    <div className={style.lr}>
-                        <div className={style.send}>이상 학생 목록</div>
-                        <div className={style.list}>
-                            <div className={style.nameContainer}>
-                                <span className={style.alertElementTitle}>이름</span>
-                                {stopName.map(name => <span className={style.alertElement}>{name}</span>)}
-                            </div>
-                            <div className={style.phoneContainer}>
-                                <span className={style.alertElementTitle}>폰 번호</span>
-                                {stopPhone.map(phone => <span className={style.alertElement}>{phone}</span>)}
-                            </div>
-                        </div>
-                        <button className={style.btn} onClick={onClick}>전환</button>
-                    </div>
+                    <StudentList title={"자가진단 미실시 학생 목록"} nameList={nameList} phoneList={phoneList} setFlip={setFlip}/>
+                    : 
+                    <StudentList title={"이상 학생 목록"} nameList={stopName} phoneList={stopPhone} setFlip={setFlip}/>
                 }
             </div>
         </div>
