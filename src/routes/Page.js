@@ -1,5 +1,5 @@
 import style from "./Page.module.css"
-import List from "./List.js"
+import List from "../components/List"
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useEffect, useState } from "react";
 import axios from "axios";

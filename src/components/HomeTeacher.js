@@ -1,13 +1,11 @@
-import styles from "../routes/Home.module.css";
+import { Link } from "react-router-dom";
+import style from "../routes/Home.module.css";
 
-function HomeTeacher({text}) {
-    const onClick = () =>{
-        window.location.href = "/loginPage"
-    }
+function HomeTeacher() {
     return (
-        <div className={styles.teacher}>
-            <span className={styles.span1}>{text}</span>
-            <button className={styles.btn} onClick={onClick}>로그인 / 회원가입</button>
+        <div className={style.teacher}>
+            <span>교사 / 교직원용</span>
+            <button className={style.butt} onClick={()=>{window.location.href="/loginPage"}}><Link className={style.button} to="/loginPage" >로그인 / 회원가입</Link></button>
         </div>
     );
 }
