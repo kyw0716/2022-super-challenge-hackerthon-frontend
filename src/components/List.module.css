@@ -28,9 +28,9 @@
 
 @font-face {
     font-family:"Nanum Myeongjo";
-    src: url("./font/NanumMyeongjo-Regular.ttf");
+    src: url("../routes/font/NanumMyeongjo-Regular.ttf");
 } 
 @font-face {
     font-family:"SongMyung";
-    src: url("./font/SongMyung-Regular.ttf");
+    src: url("../routes/font/SongMyung-Regular.ttf");
 }

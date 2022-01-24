@@ -1,5 +1,9 @@
 import { useState } from "react";
+import Input from "../components/Input";
+import Radio from "../components/Radio";
 import styles from "./Signup.module.css"
+import Select from "../components/Select";
+import CheckPassword from "../components/CheckPassword";
 
 function Signup() {
     const [password, setPassword] = useState("");
@@ -56,110 +60,15 @@ function Signup() {
         <div className={styles.container}>
             <span className={styles.logo}>@ㅎㅏㅌㅔㄱㅇㅣㅁㅣㄹㅐㄷㅏㅇ</span>
             <form className={styles.formBox} onSubmit={onSubmit}>
-                <div className={styles.smallDiv}>
-                    <label htmlFor="loginId">아이디 </label>
-                    <input
-                        className={styles.input}
-                        id="loginId"
-                        name="loginId"
-                        placeholder="ID"
-                        onChange={idChange}
-                    />
-                </div>
-                <div className={styles.smallDiv}>
-                    <label htmlFor="password">비밀번호 </label>
-                    <input
-                        className={styles.input}
-                        id="password"
-                        name="password"
-                        placeholder="PASSWORD"
-                        value={password}
-                        onChange={pwOnChange}
-                        type="password"
-                    />
-                </div>
-                <div className={styles.smallDiv}>
-                    <label htmlFor="confirmPassword">비밀번호 확인 </label>
-                    <input
-                        className={styles.input}
-                        placeholder="PASSWORD"
-                        value={confirmPassword}
-                        onChange={cpwOnChange}
-                        type="password"
-                        id="confirmPassword"
-                    />
-                </div>
-                <span className={styles.span}>
-                    {password !== confirmPassword && confirmPassword !== "" ? "비밀번호를 확인해주세요!" : ""}
-                </span>
-                <div className={styles.smallDiv}>
-                    <label htmlFor="name">이름 </label>
-                    <input
-                        className={styles.input}
-                        id="name"
-                        name="name"
-                        placeholder="NAME"
-                        onChange={nameChange}
-                    />
-                </div>
-                <div className={styles.smallDiv}>
-                    <label htmlFor="phoneNumber">전화번호 </label>
-                    <input
-                        className={styles.input}
-                        id="phoneNumber"
-                        name="phoneNumber"
-                        placeholder="PHONENUMBER"
-                        onChange={phoneNumberChange}
-                    />
-                </div>
-                <div className={styles.smallDiv}>
-                    <label htmlFor="age">나이 </label>
-                    <input
-                        className={styles.input}
-                        id="age"
-                        name="age"
-                        placeholder="AGE"
-                        onChange={ageChange}
-                    />
-                </div>
-                <div className={styles.smallDiv}>
-                    <label>성별 </label>
-                    <div className={styles.genderDiv}>
-                        <div className={styles.radio}>
-                            <label htmlFor="male">남</label>
-                            <input
-                                id="male"
-                                name="gender"
-                                type="radio"
-                                placeholder="남"
-                                value="MAN"
-                                onChange={genderChange}
-                            />
-                        </div>
-                        <div className={styles.radio}>
-                            <label htmlFor="female">여</label>
-                            <input
-                                id="female"
-                                name="gender"
-                                type="radio"
-                                placeholder="여"
-                                value="WOMAN"
-                                onChange={genderChange}
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.smallDiv}>
-                    <label htmlFor="job">직업 </label>
-                    <select 
-                        className={styles.select} 
-                        onChange={jobChange}
-                    >
-                        <option value="none">직업을 선택하세요</option>
-                        <option value="TEACHER">선생님</option>
-                        <option value="STUDENT">학생</option>
-                    </select>
-                </div>
+                <Input labelText={"아이디 "} id={"loginId"} placeholder={"ID"} value={idValue} onChange={idChange} type={"text"}/>
+                <Input labelText={"비밀번호 "} id={"password"} placeholder={"PASSWORD"} value={password} onChange={pwOnChange} type={"password"}/>
+                <Input labelText={"비밀번호 확인 "} id={"confirmPassword"} placeholder={"PASSWORD"} value={confirmPassword} onChange={cpwOnChange} type={"password"}/>
+                <CheckPassword password={password} confirmPassword={confirmPassword} />
+                <Input labelText={"이름 "} id={"name"} placeholder={"NAME"} value={nameValue} onChange={nameChange} type={"text"}/>
+                <Input labelText={"전화번호 "} id={"phoneNumber"} placeholder={"PHONENUMBER"} value={phoneNumber} onChange={phoneNumberChange} type={"number"}/>
+                <Input labelText={"나이 "} id={"age"} placeholder={"AGE"} value={ageValue} onChange={ageChange} type={"number"}/>
+                <Radio onChange={genderChange} />
+                <Select onChange={jobChange} />
                 <button className={styles.btn}>제출</button>
             </form>
         </div>
