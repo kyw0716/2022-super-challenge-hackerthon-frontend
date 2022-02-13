@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/hackerthon-practice/static/css/main.64defea5.css",
-    "main.js": "/hackerthon-practice/static/js/main.fecc700a.js",
+    "main.js": "/hackerthon-practice/static/js/main.6d56ada9.js",
     "static/media/NanumMyeongjo-Regular.ttf": "/hackerthon-practice/static/media/NanumMyeongjo-Regular.9f891674ebfc94b7664c.ttf",
     "static/media/SongMyung-Regular.ttf": "/hackerthon-practice/static/media/SongMyung-Regular.1bfcd536436055354fb6.ttf",
     "static/media/SCDream8.otf": "/hackerthon-practice/static/media/SCDream8.64217e4da7638066e57a.otf",
     "static/media/background5.png": "/hackerthon-practice/static/media/background5.9f888a1d6f56b01fe7d1.png",
     "index.html": "/hackerthon-practice/index.html",
     "main.64defea5.css.map": "/hackerthon-practice/static/css/main.64defea5.css.map",
-    "main.fecc700a.js.map": "/hackerthon-practice/static/js/main.fecc700a.js.map"
+    "main.6d56ada9.js.map": "/hackerthon-practice/static/js/main.6d56ada9.js.map"
   },
   "entrypoints": [
     "static/css/main.64defea5.css",
-    "static/js/main.fecc700a.js"
+    "static/js/main.6d56ada9.js"
   ]
 }
