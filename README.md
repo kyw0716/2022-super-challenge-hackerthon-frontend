@@ -1,7 +1,7 @@
-# INHA univ. Super Challenge Hackathon Front-end Repository
+# Super Challenge Hackathon Front-end Repository
 ## 하텍이미래당 팀
 
-인하대학교 2022 슈퍼챌린지 소프트웨어 해커톤 (2022.01.14 ~ 2022.01.21)
+2022 슈퍼챌린지 소프트웨어 해커톤 (2022.01.14 ~ 2022.01.21)
 코로나19 관련 종합정보 서비스 프론트엔드 개발 Repository
 
 <br/>
